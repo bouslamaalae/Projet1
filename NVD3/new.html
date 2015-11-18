@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+	<script src="nv.d3.js"></script> 
+	
+
+    <style>
+        text {
+            font: 12px sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        html, body, #test1, svg {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h2> <center> Product Chart ! </center> </h2>
+
+<div id="test1" style='height:500px' class='with-3d-shadow with-transitions'>
+    <svg></svg>
+</div>
+
+<script>
+
+   // create the chart
+    var chart;
+ nv.addGraph(function() {
+        chart = nv.models.scatterChart()
+            .showDistX(true)
+            .showDistY(true)
+            //.useVoronoi(true)
+			//.color(d3.scale.category10().range())// //d3.scale.category20().range()
+            //.duration(300)
+			//.sizeRange([100, 5000])
+        ;
+		
+		
+       //chart.dispatch.on('brush');
+	   //, function(e){
+            //console.log(e);
+			//console.dir(e);
+        //});
+	chart.padData(true);
+	
+        chart.xAxis
+		.tickFormat(d3.format('d'))
+		.axisLabel("ISO_max");
+        chart.yAxis
+		.tickFormat(d3.format('d'))
+		.axisLabel("ISO_min");
+        d3.select('#test1 svg')
+            .datum(testData)
+            .call(chart)
+			.attr("class", "tooltip") 
+			
+			 
+			//.dispatch('elementMouseover')
+			
+				;
+				
+		//chart.showLegend(true);
+		//chart.noData("There is no Data to display");
+		
+		chart.tooltip.contentGenerator(
+		function (e) {
+		//var data=testData();
+		//var data=testData();
+		//var key = [data["key"]]
+		//var key=JSON.stringify(data,["key"]);
+		//for (j = 0; j < data.length; j++) {
+		//} // =JSON.stringify(data[j],["key"]);
+		//var key=JSON.stringify(data,["key"]);
+	/*		chart.select('#test1 svg')
+  .attr('xlink:href', function(d, i) {
+    var percent = (d.endAngle - d.startAngle) / (2 * Math.PI);
+    return (d.data.image_path && percent > labelThreshold) ? d.data.image_path : '';
+  });*/
+        return '<h3>' + "Modele : " + JSON.stringify(e.point.modele) + '</h3>'+'</br>' 
+		+ '<h3>' +'ISO_max : ' + JSON.stringify(e.point.x) + '</h3>'+'</br>'
+		+ '<h3>' +'ISO_min : ' + JSON.stringify(e.point.y) + '</h3>'
+		+ '<h3>' +'Prix : ' + JSON.stringify(e.point.prix) + '</h3>' 
+		+ '<h3>' +'Site : ' + JSON.stringify(e.point.site_officiel) + '</h3>' 
+		+ '<h3>' +'Image : ' + JSON.stringify(e.point.image_path) + '</h3>' ; //
+		});
+		chart.tooltip.hideDelay(5000);
+		
+	
+        nv.utils.windowResize(chart.update);
+        //chart.dispatch.on('stateChange', function(e) { ('New State:', JSON.stringify(e)); });
+        return chart;});
+
+    function testData() {
+	var data = [
+{"key": "D4S","values" : [{"x":950,"y":150,"size":50,"shape":'diamond',"modele":'D4S',"prix":'50 €',"image_path": "<img src="+"img.png"+">","site_officiel":'<a href>'+ 'http://www.canon.fr/' + '</a href>'},{"x":1750, "y":250,"size":5,"modele":'D4S'},{"x":1800,"y":350,"size":5,"modele":'D4S'}]},
+{"key": 'D7000',"values" :[{"x":100,"y":6400,"size":50,"modele":'D7000',"prix":'10 €',"image_path": "<img src="+"img.png"+">"},{"x":200,"y":6400,"size":5,"modele":'D7000'},{"x":300,"y":6400,"size":5,"modele":'D7000'}]},
+{"key": 'D80',"values" :[{"x":1600,"y":100,"size":50,"modele":'D80',"prix":'200 €',"image_path": "<img src="+"img.png"+">"},{"x":1700,"y":100,"size":5,"modele":'D80'},{"x":1800,"y":100,"size":5,"modele":'D80'}]},
+{"key": 'D60',"values" :[{"x":100,"y":600,"size":50,"modele":'D60',"prix":'300 €',"image_path": "<img src="+"img.png"+">"},{"x":400,"y":1600,"size":5,"modele":'D60'},{"x":300,"y":1600,"size":5,"modele":'D60'}]},
+{"key": 'D70',"values" :[{"x":200,"y":1900,"size":50,"modele":'D70',"prix":'30 €',"image_path": "<img src="+"img.png"+">"}]},
+{"key": 'D700',"values" :[{"x":500,"y":6400,"size":5,"modele":'D700',"prix":'75 €',"image_path": "<img src="+"img.png"+">"}]},
+{"key": 'D2H',"values" :[{"x":200,"y":1600,"size":5,"modele":'D2H',"prix":'90 €',"image_path": "<img src="+"img.png"+">"}]},
+{"key": 'D200',"values" :[{"x":1600,"y":500,"size":5,"modele":'D200',"prix":'150 €',"image_path": "<img src="+"img.png"+">"}]},
+{"key": 'D300S',"values" :[{"x":3200,"y":200,"size":5,"modele":'D300S',"prix":'190 €',"image_path": "<img src="+"img.png"+">"}]},
+{"key": 'D2Hs',"values" :[{"x":200,"y":2000,"size":5,"modele":'D2Hs',"prix":'100 €',"image_path": "<img src="+"img.png"+">"}]}
+]
+
+  	
+	//shapes = ['cross'], //,'circle', 'cross', 'triangle-up', 'triangle-down', 'diamond', 'square'
+	//random = d3.random.normal();
+	
+	/*data.push({
+                key: 'points',
+                values: []
+				
+			});*/
+			/*for (i=0; i<data.length;i++){
+	data[i].values.push({
+					x: null,
+					y: null,
+                    size: Math.round(Math.random() * 100) / 100,
+                    //shape: shapes[i % shapes.length]
+                });}*/
+				
+return data;
+}
+</script>
+</body>
+</html>

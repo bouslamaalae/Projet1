@@ -28,7 +28,7 @@ public class MyPCMPrinterTest {
     	//File nomFichier = new File("PCM.html");
     	//nomFichier.createNewFile();
         // Load a PCM
-        File pcmFile = new File("pcms/example.pcm");
+        File pcmFile = new File("pcms/Exemple2.pcm");
         PCMLoader loader = new KMFJSONLoader();
         PCM pcm = loader.load(pcmFile).get(0).getPcm();
         assertNotNull(pcm);
@@ -59,27 +59,33 @@ public class MyPCMPrinterTest {
         
         JsonExport jsexport = new JsonExport();
         try{
-        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/jsonfichier1.json")));
-        	buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/jsonfichier3.json")));
+        	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
+        	buffwrit.write(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse"));
         	buffwrit.close();
         }
         catch(IOException e){
         	e.printStackTrace();
         }
-        System.out.println(jsexport.matrixAfficher("Focus points","Megapixel"));
+        //System.out.println(jsexport.matrixProduct(pcm));
 
     }
     
     @Test
-    public void testMatrixAfficher(){
+    public void testMatrixAfficher() throws IOException{
+    	File pcmFile = new File("pcms/Exemple2.pcm");
+        PCMLoader loader = new KMFJSONLoader();
+        PCM pcm = loader.load(pcmFile).get(0).getPcm();
+        assertNotNull(pcm);
+    	
     	JsonExport jsexport = new JsonExport();
-    	assertNotNull(jsexport.matrixAfficher("ISO max","ISO min"));
+    	assertNotNull(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse"));
     	
-    	assertTrue(jsexport.matrixAfficher("ISO max","ISO min").length()>0);
+    	assertTrue(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").length()>0);
     	
-    	assertEquals(jsexport.matrixAfficher("ISO max","ISO min").substring(18, 20), "D1");
+    	//assertEquals(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").substring(18, 20), "D1");
     	//System.out.println();
-    	
+    	 System.out.println(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse"));
     }
     
    

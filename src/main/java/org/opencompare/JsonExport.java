@@ -1,15 +1,14 @@
 package org.opencompare;
 
-import static org.junit.Assert.assertNotNull;
-
-import java.io.File;
+import java.awt.image.FilteredImageSource;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.opencompare.api.java.Cell;
 import org.opencompare.api.java.PCM;
-import org.opencompare.api.java.impl.io.KMFJSONLoader;
-import org.opencompare.api.java.io.PCMLoader;
 
 public class JsonExport {
 	
@@ -28,6 +27,7 @@ public class JsonExport {
 		//   			assertNotNull(pcm);
 		   			builbder.append("{\n");
 		   			for(int i=0; i<pcm.getProducts().size(); i++){
+		   				
 		   				List<Cell> cells =  pcm.getProducts().get(i).getCells();
 		   				builbder.append("{\"nomProduit\": " + "\""+pcm.getProducts().get(i).getName()+"\", \"valeurs\" : [");
 		   				for(Cell cl : cells){
@@ -116,6 +116,109 @@ public class JsonExport {
  		 		
  		return builbder.toString();
     }
+    public String filtreHtml(PCM pcm)
+    {
+    	ArrayList<String> filtreString ;
+		 ArrayList<String> filtreInteger ;
+		 ArrayList<String> filtreBool ;
+		 
+    	 StringBuilder builbder = new StringBuilder();
+    	 builbder.append("<html> \n");
+    	 builbder.append("<body> \n");
+    	 builbder.append("<table> \n");
+    	 builbder.append("<tr> \n");
+    	 for(int i=0; i<pcm.getFeatures().size(); i++){
+    		 filtreString = new ArrayList<String>();
+    		 filtreInteger = new ArrayList<String>();
+    		 filtreBool = new ArrayList<String>();
+    		 builbder.append("<td><br> \n");
+    		 builbder.append(pcm.getFeatures().get(i).getName());
+    		 builbder.append("<br>");
+    		 
+    		 for(int j=0; j<pcm.getProducts().size(); j++)
+			 {
+			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("IntegerValue")||pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("RealValue"))
+    		   { if(!filtreInteger.contains(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()))
+    			{
+    				filtreInteger.add(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent());
+    			}
+   			   }
+			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("StringValue"))
+     		   { if(!filtreString.contains(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()))
+     			 {
+     				filtreString.add(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent());
+     			 }
+				}
+			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("BooleanValue")||pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("Conditional"))
+     		   { if(!filtreBool.contains(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()))
+     			 {
+     				filtreBool.add(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent());
+     			 }
+				}
+					
+    	 }
+    		 for (int k=0;k<filtreInteger.size();k++)
+    		 {
+    			 builbder.append("<tr> \n");
+    			 builbder.append("<td> \n");
+    			 builbder.append(filtreInteger.get(k));
+    			 builbder.append("<td> \n");
+    			 builbder.append("<input type=\"range\" > ");
+    			// builbder.append("\n");
+    			 builbder.append("</tr> \n");
+    		 }
+    		 for (int l=0;l<filtreString.size();l++)
+    		 {
+    			 builbder.append("<tr> \n");
+    			 builbder.append("<td> \n");
+    			 builbder.append(filtreString.get(l));
+    			 builbder.append("<td> \n");
+    			 builbder.append("<input type=\"checkbox\" > ");
+    			 //builbder.append("\n");
+    			 builbder.append("</tr> \n");
+    		 }
+    		 for (int y=0;y<filtreBool.size();y++)
+    		 {
+    			 builbder.append("<tr> \n");
+    			 builbder.append("<td> \n");
+    			 builbder.append(filtreBool.get(y));
+    			 builbder.append("<td> \n");
+    			 builbder.append("<input type=\"checkbox\" > ");
+    			 builbder.append("</tr> \n");
+    		 }
+    		 
+    		// builbder.append("fiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin");
+    		 
+    		 
+    		    		 
+    		 
+//    		 Cell c = pcm.getProducts().get(i).getCells().get(2);
+//    		 if(c.getInterpretation().toString().contains("StringValue"))
+//			 {
+//				 builbder.append("<input type=\"checkbox\" > ");
+//				 builbder.append(c.getContent().toString());
+//			 }
+    		 
+    		 
+    		 
+    		 
+//    		 for(Cell cl : cells){
+//    			 if(cl.getInterpretation().toString().contains("StringValue"))
+//    			 {
+//    				 builbder.append("<input type=\"checkbox\" > ");
+//    				 builbder.append(cl.getContent().toString());
+//    			 }
+//    			 
+//    			// builbder.append("Filter:" + "\"" + cl.getInterpretation().toString().substring(36, 48)+ "\","); 
+    		 }
+    	 
+    	 builbder.append("\n");
+    	 builbder.append("</body> \n");
+    	 builbder.append("</html> \n");
+    	 
+    	return builbder.toString();
+    }
+    
     
 /*    public String matrixAfficher(PCM pcm, String col1, String col2) throws IOException{
     	 // Load a PCM

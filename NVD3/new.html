@@ -69,7 +69,7 @@ d3.json("new.json",function(data) { ////////////////////////////////////////////
 
 		
         nv.utils.windowResize(chart.update);
-       //chart.dispatch.on('stateChange', function(e) { ('New State:', JSON.stringify(e)); });
+       chart.dispatch.on('stateChange', function(e) { ('New State:', JSON.stringify(e)); });
         return chart;
 });
 })

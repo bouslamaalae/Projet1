@@ -69,7 +69,7 @@ public class MyPCMPrinterTest {
         	e.printStackTrace();
         }
         //System.out.println(jsexport.matrixProduct(pcm));
-        System.out.println(jsexport.filtreHtml(pcm));
+        //System.out.println(jsexport.filtreHtml(pcm));
         
     }
     
@@ -80,14 +80,23 @@ public class MyPCMPrinterTest {
         PCM pcm = loader.load(pcmFile).get(0).getPcm();
         assertNotNull(pcm);
     	
-    	JsonExport jsexport = new JsonExport();
+        JsonExport jsexport = new JsonExport();
+        try{
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/jsonfich.json")));
+        	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
+        	buffwrit.write(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
+        	buffwrit.close();
+        }
+        catch(IOException e){
+        	e.printStackTrace();
+        }
     	//assertNotNull(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse"));
     	
     	//assertTrue(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").length()>0);
     	
     	//assertEquals(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").substring(18, 20), "D1");
     	//System.out.println();
-    //	 System.out.println(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
+    	 System.out.println(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
     }
     
    

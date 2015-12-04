@@ -83,9 +83,11 @@ public class JsonExport {
     		 filtreString = new ArrayList<String>();
     		 filtreInteger = new ArrayList<Float>();
     		 filtreBool = new ArrayList<String>();
-    		 builbder.append("<td><br> \n");
-    		 builbder.append(pcm.getFeatures().get(i).getName());
-    		 builbder.append("<br>");
+    		 builbder.append("<td></br> \n");
+    		 // on met le nom du feature au dessus
+    		 builbder.append(pcm.getFeatures().get(i).getName() + "\n");
+    		 builbder.append("</tr> \n");
+    		 builbder.append("</br>");
     		 
     		 for(int j=0; j<pcm.getProducts().size(); j++)
 			 {
@@ -160,22 +162,23 @@ public class JsonExport {
     			 builbder.append("</FORM> \n");
     			 builbder.append("</td> \n");
     			 builbder.append("</tr> \n");
-    			 builbder.append("</br> \n");
+    		
     		 }
     		 for (int y=0;y<filtreBool.size();y++)
     		 {
     			 builbder.append("<tr> \n");
     			 builbder.append("<td> \n");
-    			 builbder.append(filtreBool.get(y));
-    			 builbder.append("<td> \n");
+    			// builbder.append(pcm.getFeatures().get(i).getName());  //on ajoute les contenus features
+    			// builbder.append("<td> \n");
     			 builbder.append("<input type=\"checkbox\" > ");
     			 builbder.append("</tr> \n");
+    			 y = filtreBool.size();
     		 }
     		 
     		// builbder.append("fiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin");
     		 
     		 
-    		    		 
+    		 builbder.append("</br> \n");   		 
     		 
 //    		 Cell c = pcm.getProducts().get(i).getCells().get(2);
 //    		 if(c.getInterpretation().toString().contains("StringValue"))
@@ -209,10 +212,10 @@ public class JsonExport {
     	// Load a PCM
        StringBuilder builbder = new StringBuilder();
        //assertNotNull(pcm);
-		builbder.append("[\n {\"key\": \"Nikon\", \n \"values\" : [");
+		builbder.append("[\n ");//{\"key\": \"Nikon\", \n \"values\" : [");
 		
 		for(int i=0; i<pcm.getProducts().size(); i++){
-			
+			builbder.append("{\"key\":  \""+pcm.getProducts().get(i).getName()+"\", \n \"values\" : [");
 			List<Cell> cells =  pcm.getProducts().get(i).getCells();
 			// deux for pour récuperer le x et y en ordre
 			for(Cell cl : cells){
@@ -247,11 +250,11 @@ public class JsonExport {
 			//pour le modele et la size
 			builbder.append("\"modele\" : " + "\""+pcm.getProducts().get(i).getName()+"\" , \"size\" : "+size+" ");
 			//builbder.deleteCharAt(builbder.lastIndexOf(","));
-			builbder.append("},\n");
+			builbder.append("}]\n},\n");
 			size += 100;
 		}
 		builbder.deleteCharAt(builbder.lastIndexOf(","));
-		builbder.append(" ] \n }]");
+		builbder.append(" ] ");//\n }]");
  		
  		 		
  		return builbder.toString();

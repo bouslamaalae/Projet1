@@ -75,10 +75,18 @@ public class JsonExport {
 		 ArrayList<String> filtreBool ;
 		 
     	 StringBuilder builbder = new StringBuilder();
+//    	 builbder.append("<html> \n");
+//    	 builbder.append("<body> \n");
+//    	 builbder.append("<table> \n");
+//    	 builbder.append("<tr> \n");
     	 builbder.append("<html> \n");
+    	 builbder.append("<head> <meta charset=\"utf-8\"> <link href=\"nv.d3.css\" rel=\"stylesheet\" type=\"text/css\"> <script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js\" charset=\"utf-8\"> </script><script src=\"nv.d3.js\"></script>  <script type=\"text/javascript\" src=\"new.js\"></script> </head>");
     	 builbder.append("<body> \n");
+    	 builbder.append("<h2><center> Product Chart ! </center></h2>");
+    	 builbder.append("<div><div id=\"cadre2\"><div id=\"test1\" style='height:500px' class='with-3d-shadow with-transitions'> <svg></svg></div></div> <div id=\"cadre1\">");
     	 builbder.append("<table> \n");
     	 builbder.append("<tr> \n");
+    	 
     	 for(int i=0; i<pcm.getFeatures().size(); i++){
     		 filtreString = new ArrayList<String>();
     		 filtreInteger = new ArrayList<Float>();
@@ -201,6 +209,9 @@ public class JsonExport {
     		 }
     	 
     	 builbder.append("\n");
+    	 builbder.append("</table> \n");
+    	 builbder.append("</div> \n");
+    	 builbder.append("</div> \n");
     	 builbder.append("</body> \n");
     	 builbder.append("</html> \n");
     	 

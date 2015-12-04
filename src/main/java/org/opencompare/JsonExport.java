@@ -3,6 +3,8 @@ package org.opencompare;
 import java.awt.image.FilteredImageSource;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -64,62 +66,12 @@ public class JsonExport {
     	
     }
     
-    public String matrixAfficher(PCM pcm,String col1, String col2) throws IOException{
-    	
-    	// Load a PCM
-       StringBuilder builbder = new StringBuilder();
-       //assertNotNull(pcm);
-		builbder.append("[\n {\"key\": \"Nikon\", \n \"values\" : [");
-		
-		for(int i=0; i<pcm.getProducts().size(); i++){
-			
-			List<Cell> cells =  pcm.getProducts().get(i).getCells();
-			// deux for pour récuperer le x et y en ordre
-			for(Cell cl : cells){
-				if(cl.getFeature().getName().equals(col1)){
-					 builbder.append("{\"x\":" + "" + cl.getContent().toString()+ ",");
-				
-				 }
-			}
-			for(Cell cl : cells){
-				if(cl.getFeature().getName().equals(col2)){
-				 builbder.append("\"y\":" + "" + cl.getContent().toString()+ ",");
-				
-				}
-			}
-			
-			
-			//ajout test: pour ajouter les autres caracteristiques.
-			for(Cell cl : cells){
-			
-				if(!cl.getFeature().getName().equals(col2) && !cl.getFeature().getName().equals(col1) && !cl.getFeature().getName().equals("LCD monitor") ){
-					
-					if (isInteger(cl.getContent())){
-						builbder.append("\"" + cl.getFeature().getName()+"\" : " + "" + cl.getContent().toString()+ ",");
-					}
-					else{
-						builbder.append("\"" + cl.getFeature().getName()+"\" : " + "\"" + cl.getContent().toString()+ "\",");
-					}
-				}
-			}
-			
-			
-			//pour le modele et la size
-			builbder.append("\"modele\" : " + "\""+pcm.getProducts().get(i).getName()+"\" , \"size\" : "+size+" ");
-			//builbder.deleteCharAt(builbder.lastIndexOf(","));
-			builbder.append("},\n");
-			size += 100;
-		}
-		builbder.deleteCharAt(builbder.lastIndexOf(","));
-		builbder.append(" ] \n }]");
- 		
- 		 		
- 		return builbder.toString();
-    }
+   
+    
     public String filtreHtml(PCM pcm)
     {
     	ArrayList<String> filtreString ;
-		 ArrayList<String> filtreInteger ;
+		 ArrayList<Float> filtreInteger ;
 		 ArrayList<String> filtreBool ;
 		 
     	 StringBuilder builbder = new StringBuilder();
@@ -129,7 +81,7 @@ public class JsonExport {
     	 builbder.append("<tr> \n");
     	 for(int i=0; i<pcm.getFeatures().size(); i++){
     		 filtreString = new ArrayList<String>();
-    		 filtreInteger = new ArrayList<String>();
+    		 filtreInteger = new ArrayList<Float>();
     		 filtreBool = new ArrayList<String>();
     		 builbder.append("<td><br> \n");
     		 builbder.append(pcm.getFeatures().get(i).getName());
@@ -138,9 +90,9 @@ public class JsonExport {
     		 for(int j=0; j<pcm.getProducts().size(); j++)
 			 {
 			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("IntegerValue")||pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("RealValue"))
-    		   { if(!filtreInteger.contains(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()))
+    		   { if(!filtreInteger.contains(Float.parseFloat(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent())))
     			{
-    				filtreInteger.add(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent());
+    				filtreInteger.add(Float.parseFloat(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()));
     			}
    			   }
 			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("StringValue"))
@@ -148,7 +100,7 @@ public class JsonExport {
      			 {
      				filtreString.add(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent());
      			 }
-				}
+			   }
 			   if(pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("BooleanValue")||pcm.getConcreteFeatures().get(i).getCells().get(j).getInterpretation().toString().contains("Conditional"))
      		   { if(!filtreBool.contains(pcm.getConcreteFeatures().get(i).getCells().get(j).getContent()))
      			 {
@@ -157,8 +109,23 @@ public class JsonExport {
 				}
 					
     	 }
+    		 //test
     		 for (int k=0;k<filtreInteger.size();k++)
+    		 { 
+    		  builbder.append("<tr> \n");
+			  builbder.append("<td> \n");
+			  Float max =  Collections.max(filtreInteger);
+			  Float min =  Collections.min(filtreInteger);
+			  builbder.append("<input type=\"range\" value=\"15\" max=\""+max+"\" min=\""+min+"\" step=\"5\"> ");
+			  builbder.append("</tr> \n");
+			 
+			  k=filtreInteger.size();
+    		 }
+    		 //fin test
+    		 
+    		/* for (int k=0;k<filtreInteger.size();k++)
     		 {
+    			 
     			 builbder.append("<tr> \n");
     			 builbder.append("<td> \n");
     			 builbder.append(filtreInteger.get(k));
@@ -166,16 +133,34 @@ public class JsonExport {
     			 builbder.append("<input type=\"range\" > ");
     			// builbder.append("\n");
     			 builbder.append("</tr> \n");
-    		 }
-    		 for (int l=0;l<filtreString.size();l++)
-    		 {
+    		 }*/
+    		 if(!filtreString.isEmpty()){
     			 builbder.append("<tr> \n");
-    			 builbder.append("<td> \n");
-    			 builbder.append(filtreString.get(l));
-    			 builbder.append("<td> \n");
-    			 builbder.append("<input type=\"checkbox\" > ");
-    			 //builbder.append("\n");
+				 builbder.append("<td> \n");
+				 builbder.append("<FORM> \n");
+				 builbder.append("<Select multiple name = "+pcm.getFeatures().get(i).getName()+">");
+
+				// builbder.append("<td> \n");
+    			 
+    			 for (int l=0;l<filtreString.size();l++)
+    			 {
+
+    				// builbder.append("<tr> \n");
+
+    				// builbder.append("<td> \n");
+    				 
+    				// builbder.append("<td> \n");
+    				 builbder.append("<option> "+filtreString.get(l)+" </option> ");
+    				 //builbder.append(filtreString.get(l));
+    				 //builbder.append("\n");
+    				 //builbder.append("</tr> \n");
+    			 }
+    			 
+    			 builbder.append("</Select>");  
+    			 builbder.append("</FORM> \n");
+    			 builbder.append("</td> \n");
     			 builbder.append("</tr> \n");
+    			 builbder.append("</br> \n");
     		 }
     		 for (int y=0;y<filtreBool.size();y++)
     		 {
@@ -219,7 +204,60 @@ public class JsonExport {
     	return builbder.toString();
     }
     
+ public String matrixAfficher(PCM pcm,String col1, String col2) throws IOException{
+    	
+    	// Load a PCM
+       StringBuilder builbder = new StringBuilder();
+       //assertNotNull(pcm);
+		builbder.append("[\n {\"key\": \"Nikon\", \n \"values\" : [");
+		
+		for(int i=0; i<pcm.getProducts().size(); i++){
+			
+			List<Cell> cells =  pcm.getProducts().get(i).getCells();
+			// deux for pour récuperer le x et y en ordre
+			for(Cell cl : cells){
+				if(cl.getFeature().getName().equals(col1)){
+					 builbder.append("{\"x\":" + "" + cl.getContent().toString()+ ",");
+				
+				 }
+			}
+			for(Cell cl : cells){
+				if(cl.getFeature().getName().equals(col2)){
+				 builbder.append("\"y\":" + "" + cl.getContent().toString()+ ",");
+				
+				}
+			}
+			
+			
+			//ajout test: pour ajouter les autres caracteristiques.
+			for(Cell cl : cells){
+			
+				if(!cl.getFeature().getName().equals(col2) && !cl.getFeature().getName().equals(col1)){// && !cl.getFeature().getName().equals("LCD monitor") ){
+					
+					if (isInteger(cl.getContent())){
+						builbder.append("\"" + cl.getFeature().getName()+"\" : " + "" + cl.getContent().toString()+ ",");
+					}
+					else{
+						builbder.append("\"" + cl.getFeature().getName()+"\" : " + "\"" + cl.getContent().toString()+ "\",");
+					}
+				}
+			}
+			
+			
+			//pour le modele et la size
+			builbder.append("\"modele\" : " + "\""+pcm.getProducts().get(i).getName()+"\" , \"size\" : "+size+" ");
+			//builbder.deleteCharAt(builbder.lastIndexOf(","));
+			builbder.append("},\n");
+			size += 100;
+		}
+		builbder.deleteCharAt(builbder.lastIndexOf(","));
+		builbder.append(" ] \n }]");
+ 		
+ 		 		
+ 		return builbder.toString();
+    }
     
+ 
 /*    public String matrixAfficher(PCM pcm, String col1, String col2) throws IOException{
     	 // Load a PCM
         StringBuilder builbder = new StringBuilder();

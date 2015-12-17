@@ -80,22 +80,22 @@ public class JsonExport {
 //    	 builbder.append("<table> \n");
 //    	 builbder.append("<tr> \n");
     	 builbder.append("<html> \n");
-    	 builbder.append("<head> <meta charset=\"utf-8\"> <link href=\"nv.d3.css\" rel=\"stylesheet\" type=\"text/css\"> <script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js\" charset=\"utf-8\"> </script><script src=\"nv.d3.js\"></script>  <script type=\"text/javascript\" src=\"new.js\"></script> </head>");
+    	 builbder.append("<head><meta charset=\"utf-8\"><link href=\"nv.d3.css\" rel=\"stylesheet\" type=\"text/css\"> <link href=\"page.css\" rel=\"stylesheet\" type=\"text/css\"><script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js\" charset=\"utf-8\"> </script><script src=\"nv.d3.js\"></script><script type=\"text/javascript\" src=\"new.js\"></script><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script></head>");
     	 builbder.append("<body> \n");
     	 builbder.append("<h2><center> Product Chart ! </center></h2>");
-    	 builbder.append("<div><div id=\"cadre2\"><div id=\"test1\" style='height:500px' class='with-3d-shadow with-transitions'> <svg></svg></div></div> <div id=\"cadre1\">");
+    	 builbder.append("<div id='main'><div id=\"test1\" style='height:500px' class='with-3d-shadow with-transitions'> <svg></svg></div> <div id=\"filtre\">");
     	 builbder.append("<table> \n");
-    	 builbder.append("<tr> \n");
+    	 builbder.append("<tr> <div>\n");
     	 
     	 for(int i=0; i<pcm.getFeatures().size(); i++){
     		 filtreString = new ArrayList<String>();
     		 filtreInteger = new ArrayList<Float>();
     		 filtreBool = new ArrayList<String>();
-    		 builbder.append("<td></br> \n");
+    		 //builbder.append("<td></br> \n");
     		 // on met le nom du feature au dessus
     		 builbder.append(pcm.getFeatures().get(i).getName() + "\n");
-    		 builbder.append("</tr> \n");
-    		 builbder.append("</br>");
+    		// builbder.append("</tr> \n");
+    		// builbder.append("</br>");
     		 
     		 for(int j=0; j<pcm.getProducts().size(); j++)
 			 {
@@ -120,10 +120,11 @@ public class JsonExport {
 					
     	 }
     		 //test
+    		 
+    		 
     		 for (int k=0;k<filtreInteger.size();k++)
     		 { 
     		  builbder.append("<tr> \n");
-			  builbder.append("<td> \n");
 			  Float max =  Collections.max(filtreInteger);
 			  Float min =  Collections.min(filtreInteger);
 			  builbder.append("<input type=\"range\" value=\"15\" max=\""+max+"\" min=\""+min+"\" step=\"5\"> ");
@@ -145,10 +146,10 @@ public class JsonExport {
     			 builbder.append("</tr> \n");
     		 }*/
     		 if(!filtreString.isEmpty()){
-    			 builbder.append("<tr> \n");
-				 builbder.append("<td> \n");
+    			// builbder.append("<tr> \n");
+				 builbder.append(" <div id=\"essai\"> \n");
 				 builbder.append("<FORM> \n");
-				 builbder.append("<Select multiple name = "+pcm.getFeatures().get(i).getName()+">");
+				 builbder.append("<Select multiple style=\"width:200px\" name = "+pcm.getFeatures().get(i).getName()+">");
 
 				// builbder.append("<td> \n");
     			 
@@ -168,14 +169,14 @@ public class JsonExport {
     			 
     			 builbder.append("</Select>");  
     			 builbder.append("</FORM> \n");
-    			 builbder.append("</td> \n");
+    			 builbder.append("</div> \n");
     			 builbder.append("</tr> \n");
+    			
     		
     		 }
     		 for (int y=0;y<filtreBool.size();y++)
     		 {
     			 builbder.append("<tr> \n");
-    			 builbder.append("<td> \n");
     			// builbder.append(pcm.getFeatures().get(i).getName());  //on ajoute les contenus features
     			// builbder.append("<td> \n");
     			 builbder.append("<input type=\"checkbox\" > ");

@@ -93,7 +93,11 @@ public class JsonExport {
     		 filtreBool = new ArrayList<String>();
     		 //builbder.append("<td></br> \n");
     		 // on met le nom du feature au dessus
+    		 builbder.append("<a class=\"b1\">");
+    		 builbder.append("<strong>");
     		 builbder.append(pcm.getFeatures().get(i).getName() + "\n");
+    		 builbder.append("</strong>");
+    		 builbder.append("</a><div class=\"toggle\" style=\"display:none\">");
     		// builbder.append("</tr> \n");
     		// builbder.append("</br>");
     		 
@@ -169,6 +173,7 @@ public class JsonExport {
     			 
     			 builbder.append("</Select>");  
     			 builbder.append("</FORM> \n");
+    			 builbder.append("</div>\n");
     			 builbder.append("</div> \n");
     			 builbder.append("</tr> \n");
     			
@@ -213,6 +218,14 @@ public class JsonExport {
     	 builbder.append("</table> \n");
     	 builbder.append("</div> \n");
     	 builbder.append("</div> \n");
+    	 builbder.append("<script> \n");
+    	 builbder.append("jQuery(document).ready(function() { jQuery(\".toggle\").hide(); \n");
+    	 builbder.append("$(\".b1\").click(function(){ \n");
+    	 builbder.append("jQuery(this).next(\".toggle\").toggle(\"fast\");\n");
+    	 builbder.append("return false; \n");
+    	 builbder.append("}); \n");
+    	 builbder.append("}); \n");
+    	 builbder.append("</script>\n");
     	 builbder.append("</body> \n");
     	 builbder.append("</html> \n");
     	 
@@ -247,7 +260,7 @@ public class JsonExport {
 			//ajout test: pour ajouter les autres caracteristiques.
 			for(Cell cl : cells){
 			
-				if(!cl.getFeature().getName().equals(col2) && !cl.getFeature().getName().equals(col1)){// && !cl.getFeature().getName().equals("LCD monitor") ){
+				if(!cl.getFeature().getName().equals(col2) && !cl.getFeature().getName().equals(col1) && !cl.getFeature().getName().equals("LCD monitor") ){
 					
 					if (isInteger(cl.getContent())){
 						builbder.append("\"" + cl.getFeature().getName()+"\" : " + "" + cl.getContent().toString()+ ",");

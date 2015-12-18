@@ -1,0 +1,131 @@
+[
+ {"key":  "D3000", 
+ "values" : [{"x":1600,"y":100,"Viewfinder magnification" : "0.8x","Sensor manufacturer" : "Sony","Wifi" : "-","Megapixel" : 10.2,"Image processor" : "EXPEED","Release Date" : "2009 3Q","_IMG_" : "","Viewfinder coverage" : "95%","Storage media" : "SD, SDHC","Movie mode" : "No","Sensor format" : "APS-C","Metering pixels" : 420,"Focus points" : 11,"Sensor type" : "CCD","GPS" : "-","Live view" : "No","modele" : "D3000" , "size" : 200 }]
+},
+{"key":  "D50", 
+ "values" : [{"x":1600,"y":200,"Live view" : "No","Image processor" : "-","Viewfinder magnification" : "0.75x","Sensor manufacturer" : "Sony","Storage media" : "SD","Viewfinder coverage" : "95%","Wifi" : "-","Release Date" : "2005 2Q","Sensor format" : "APS-C","_IMG_" : "","Movie mode" : "No","Metering pixels" : 420,"Sensor type" : "CCD","Focus points" : 5,"Megapixel" : 6.1,"GPS" : "-","modele" : "D50" , "size" : 300 }]
+},
+{"key":  "D3100", 
+ "values" : [{"x":3200,"y":100,"Viewfinder coverage" : "95%","GPS" : "-","Viewfinder magnification" : "0.8x","Sensor type" : "CMOS","Metering pixels" : 420,"_IMG_" : "","Wifi" : "-","Sensor format" : "APS-C","Focus points" : 11,"Megapixel" : 14.2,"Sensor manufacturer" : "Nikon","Live view" : "Yes","Release Date" : "2010 3Q","Image processor" : "EXPEED 2","Movie mode" : "Yes","Storage media" : "SD, SDHC, SDXC","modele" : "D3100" , "size" : 400 }]
+},
+{"key":  "D4", 
+ "values" : [{"x":12800,"y":100,"Megapixel" : 16.2,"Sensor manufacturer" : "Nikon","Release Date" : "2012 1Q","Storage media" : "CF, XQD","Viewfinder magnification" : "0.7x","Viewfinder coverage" : "100%","Sensor format" : "Full-frame","Wifi" : "-","Metering pixels" : 91000,"Live view" : "Yes","Focus points" : 51,"Movie mode" : "Yes","Image processor" : "EXPEED 3","Sensor type" : "CMOS","GPS" : "-","_IMG_" : "","modele" : "D4" , "size" : 500 }]
+},
+{"key":  "D3300", 
+ "values" : [{"x":12800,"y":100,"Wifi" : "-","Live view" : "Yes","GPS" : "-","Focus points" : 11,"Metering pixels" : 420,"Image processor" : "EXPEED 4","Viewfinder magnification" : "0.85x","Storage media" : "SD, SDHC, SDXC","Megapixel" : 24.2,"Sensor type" : "CMOS","Viewfinder coverage" : "95%","Movie mode" : "Yes","Release Date" : "2014 1Q","Sensor manufacturer" : "Nikon","_IMG_" : "","Sensor format" : "APS-C","modele" : "D3300" , "size" : 600 }]
+},
+{"key":  "D200", 
+ "values" : [{"x":1600,"y":100,"Release Date" : "2005 4Q","Movie mode" : "No","Live view" : "No","_IMG_" : "","Viewfinder coverage" : "95%","Focus points" : 11,"Sensor format" : "APS-C","Storage media" : "CF, MicroDrive","Viewfinder magnification" : "0.94x","Image processor" : "-","Sensor manufacturer" : "Sony","Metering pixels" : 1005,"Megapixel" : 10.2,"GPS" : "-","Sensor type" : "CCD","Wifi" : "-","modele" : "D200" , "size" : 700 }]
+},
+{"key":  "D300", 
+ "values" : [{"x":3200,"y":200,"Sensor format" : "APS-C","_IMG_" : "","GPS" : "-","Megapixel" : 12.3,"Live view" : "Yes","Metering pixels" : 1005,"Sensor type" : "CMOS","Release Date" : "2007 3Q","Image processor" : "EXPEED","Viewfinder coverage" : "100%","Sensor manufacturer" : "Sony","Movie mode" : "No","Wifi" : "-","Storage media" : "CF, MicroDrive","Viewfinder magnification" : "0.94x","Focus points" : 51,"modele" : "D300" , "size" : 800 }]
+},
+{"key":  "D750", 
+ "values" : [{"x":12800,"y":100,"Viewfinder coverage" : "100%","Release Date" : "2014 3Q","Sensor manufacturer" : "NikonCategory:All articles with unsourced statementsCategory:Articles with unsourced statements from August 2015","Megapixel" : 24.9,"Wifi" : "Yes (Built-in)","Metering pixels" : 91000,"Image processor" : "EXPEED 4","Sensor type" : "CMOS","_IMG_" : "","Storage media" : "SD SDHC SDXC","Viewfinder magnification" : "0.7x","GPS" : "-","Sensor format" : "Full-frame","Movie mode" : "Yes","Live view" : "Yes","Focus points" : 51,"modele" : "D750" , "size" : 900 }]
+},
+{"key":  "D800", 
+ "values" : [{"x":6400,"y":100,"Sensor manufacturer" : "Sony","Sensor type" : "CMOS","GPS" : "-","Focus points" : 51,"Release Date" : "2012 1Q","Wifi" : "-","Sensor format" : "Full-frame","Viewfinder coverage" : "100%","Live view" : "Yes","Metering pixels" : 91000,"Megapixel" : 36.3,"Image processor" : "EXPEED 3","_IMG_" : "","Viewfinder magnification" : "0.7x","Movie mode" : "Yes","Storage media" : "CF, SDHC, SDXC","modele" : "D800" , "size" : 1000 }]
+},
+{"key":  "D90", 
+ "values" : [{"x":3200,"y":200,"Metering pixels" : 420,"Release Date" : "2008 3Q","Viewfinder coverage" : "96%","Live view" : "Yes","Image processor" : "EXPEED","_IMG_" : "","GPS" : "-","Movie mode" : "Yes","Storage media" : "SD, SDHC","Viewfinder magnification" : "0.94x","Sensor type" : "CMOS","Wifi" : "-","Sensor manufacturer" : "Sony","Focus points" : 11,"Megapixel" : 12.3,"Sensor format" : "APS-C","modele" : "D90" , "size" : 1100 }]
+},
+{"key":  "D2H", 
+ "values" : [{"x":1600,"y":200,"Image processor" : "-","Live view" : "No","Sensor type" : "JFET-LBCAST","Release Date" : "2003 3Q","Focus points" : 11,"Sensor manufacturer" : "Nikon","GPS" : "-","Megapixel" : 4.1,"Sensor format" : "APS-C","_IMG_" : "","Viewfinder coverage" : "100%","Wifi" : "-","Movie mode" : "No","Metering pixels" : 1005,"Viewfinder magnification" : "0.86x","Storage media" : "CF, MicroDrive","modele" : "D2H" , "size" : 1200 }]
+},
+{"key":  "D40", 
+ "values" : [{"x":1600,"y":200,"Live view" : "No","GPS" : "-","Movie mode" : "No","Viewfinder coverage" : "95%","Storage media" : "SD, SDHC","Wifi" : "-","Sensor type" : "CCD","Megapixel" : 6.1,"Sensor manufacturer" : "Sony","Viewfinder magnification" : "0.8x","Focus points" : 3,"Sensor format" : "APS-C","Image processor" : "-","_IMG_" : "","Metering pixels" : 420,"Release Date" : "2006 4Q","modele" : "D40" , "size" : 1300 }]
+},
+{"key":  "D600", 
+ "values" : [{"x":6400,"y":100,"Megapixel" : 24.3,"Sensor format" : "Full-frame","Image processor" : "EXPEED 3","Live view" : "Yes","Sensor manufacturer" : "Sony","Viewfinder coverage" : "100%","GPS" : "-","Storage media" : "SD/SDHC/SDXC (×2)","Release Date" : "2012 3Q","Sensor type" : "CMOS","Movie mode" : "Yes","Wifi" : "-","_IMG_" : "","Metering pixels" : 2016,"Focus points" : 39,"Viewfinder magnification" : "0.7x","modele" : "D600" , "size" : 1400 }]
+},
+{"key":  "D5000", 
+ "values" : [{"x":3200,"y":200,"Sensor manufacturer" : "Sony","Viewfinder coverage" : "95%","Movie mode" : "Yes","Viewfinder magnification" : "0.78x","Sensor format" : "APS-C","Storage media" : "SD, SDHC","Megapixel" : 12.3,"Release Date" : "2009 2Q","_IMG_" : "","Live view" : "Yes","Wifi" : "-","Metering pixels" : 420,"Sensor type" : "CMOS","Image processor" : "EXPEED","Focus points" : 11,"GPS" : "-","modele" : "D5000" , "size" : 1500 }]
+},
+{"key":  "D70s", 
+ "values" : [{"x":1600,"y":200,"Viewfinder coverage" : "95%","Focus points" : 5,"Image processor" : "-","Viewfinder magnification" : "0.75x","GPS" : "-","Wifi" : "-","Sensor manufacturer" : "Sony","_IMG_" : "","Release Date" : "2005 2Q","Movie mode" : "No","Sensor type" : "CCD","Storage media" : "CF, MicroDrive","Megapixel" : 6.1,"Sensor format" : "APS-C","Live view" : "No","Metering pixels" : 1005,"modele" : "D70s" , "size" : 1600 }]
+},
+{"key":  "D2X", 
+ "values" : [{"x":800,"y":100,"Release Date" : "2004 3Q","Storage media" : "CF, MicroDrive","Metering pixels" : 1005,"Live view" : "No","GPS" : "-","Movie mode" : "No","_IMG_" : "2.static.img-dpreview.com/reviews/NikonD2X/Images/frontview-001.jpg?v=3416","Focus points" : 11,"Sensor format" : "APS-C","Viewfinder magnification" : "0.86x","Wifi" : "-","Viewfinder coverage" : "100%","Sensor type" : "CMOS","Image processor" : "-","Megapixel" : 12.4,"Sensor manufacturer" : "Sony","modele" : "D2X" , "size" : 1700 }]
+},
+{"key":  "D1", 
+ "values" : [{"x":1600,"y":200,"Viewfinder magnification" : "0.8x","Sensor format" : "APS-C","Metering pixels" : 1005,"Movie mode" : "No","Storage media" : "CF","Sensor manufacturer" : "Sony","GPS" : "-","Live view" : "No","Megapixel" : 2.66,"Focus points" : 5,"Release Date" : "1999 2Q","Sensor type" : "CCD","Image processor" : "-","_IMG_" : "","Wifi" : "-","Viewfinder coverage" : "96%","modele" : "D1" , "size" : 1800 }]
+},
+{"key":  "D60", 
+ "values" : [{"x":1600,"y":100,"Image processor" : "EXPEED","GPS" : "-","Focus points" : 3,"Megapixel" : 10.2,"Movie mode" : "No","Viewfinder coverage" : "95%","Sensor type" : "CCD","Viewfinder magnification" : "0.8x","Sensor format" : "APS-C","Sensor manufacturer" : "Sony","Wifi" : "-","Storage media" : "SD, SDHC","Metering pixels" : 420,"_IMG_" : "","Live view" : "No","Release Date" : "2008 1Q","modele" : "D60" , "size" : 1900 }]
+},
+{"key":  "D80", 
+ "values" : [{"x":1600,"y":100,"Live view" : "No","Viewfinder magnification" : "0.94x","Sensor manufacturer" : "Sony","Sensor format" : "APS-C","Sensor type" : "CCD","Wifi" : "-","Release Date" : "2006 3Q","Viewfinder coverage" : "95%","Image processor" : "-","Megapixel" : 10.2,"_IMG_" : "","Storage media" : "SD, SDHC","Metering pixels" : 420,"Focus points" : 11,"Movie mode" : "No","GPS" : "-","modele" : "D80" , "size" : 2000 }]
+},
+{"key":  "D5200", 
+ "values" : [{"x":6400,"y":100,"Live view" : "Yes","Viewfinder coverage" : "95%","Sensor type" : "CMOS","Storage media" : "SD, SDHC, SDXC","Movie mode" : "Yes","Focus points" : 39,"_IMG_" : "","Wifi" : "-","Image processor" : "EXPEED 3","Sensor manufacturer" : "Toshiba","Sensor format" : "APS-C","GPS" : "-","Megapixel" : 24.1,"Metering pixels" : 2016,"Viewfinder magnification" : "0.78x","Release Date" : "2012 4Q","modele" : "D5200" , "size" : 2100 }]
+},
+{"key":  "D5500", 
+ "values" : [{"x":25600,"y":100,"Release Date" : "2015 1Q","Movie mode" : "Yes","Viewfinder coverage" : "95%","Focus points" : 39,"Image processor" : "EXPEED 4","Viewfinder magnification" : "0.82x","Sensor format" : "APS-C","GPS" : "-","_IMG_" : "","Sensor manufacturer" : "Sony","Sensor type" : "CMOS","Wifi" : "Yes (Built-in)","Megapixel" : 24.1,"Storage media" : "SD, SDHC, SDXC","Metering pixels" : 2016,"Live view" : "Yes","modele" : "D5500" , "size" : 2200 }]
+},
+{"key":  "D7000", 
+ "values" : [{"x":6400,"y":100,"Viewfinder magnification" : "0.94x","Wifi" : "-","Release Date" : "2010 3Q","Focus points" : 39,"Sensor type" : "CMOS","Movie mode" : "Yes","Image processor" : "EXPEED 2","GPS" : "-","_IMG_" : "www.kenrockwell.com/nikon/d7000/D3S_2871-1200.jpg","Storage media" : "SD/SDHC/SDXC (×2)","Sensor manufacturer" : "Sony","Megapixel" : 16.2,"Sensor format" : "APS-C","Live view" : "Yes","Viewfinder coverage" : "100%","Metering pixels" : 2016,"modele" : "D7000" , "size" : 2300 }]
+},
+{"key":  "D2Hs", 
+ "values" : [{"x":1600,"y":200,"Live view" : "No","Sensor manufacturer" : "Nikon","GPS" : "-","Movie mode" : "No","Release Date" : "2005 1Q","Viewfinder magnification" : "0.86x","Sensor format" : "APS-C","Sensor type" : "JFET-LBCAST","_IMG_" : "","Metering pixels" : 1005,"Wifi" : "-","Megapixel" : 4.1,"Focus points" : 11,"Viewfinder coverage" : "100%","Storage media" : "CF, MicroDrive","Image processor" : "-","modele" : "D2Hs" , "size" : 2400 }]
+},
+{"key":  "D700", 
+ "values" : [{"x":6400,"y":200,"_IMG_" : "","Image processor" : "EXPEED","GPS" : "-","Viewfinder coverage" : "95%","Megapixel" : 12.1,"Sensor manufacturer" : "Nikon","Viewfinder magnification" : "0.7x","Metering pixels" : 1005,"Live view" : "Yes","Focus points" : 51,"Storage media" : "CF","Sensor type" : "CMOS","Sensor format" : "Full-frame","Release Date" : "2008 3Q","Movie mode" : "No","Wifi" : "-","modele" : "D700" , "size" : 2500 }]
+},
+{"key":  "D5300", 
+ "values" : [{"x":12800,"y":100,"Metering pixels" : 2016,"Movie mode" : "Yes","Release Date" : "2013 4Q","Sensor format" : "APS-C","Live view" : "Yes","Viewfinder magnification" : "0.82x","Megapixel" : 24.1,"Wifi" : "Yes (Built-in)","_IMG_" : "","Storage media" : "SD, SDHC, SDXC","GPS" : "Yes (Built-in)","Sensor type" : "CMOS","Sensor manufacturer" : "Sony","Image processor" : "EXPEED 4","Viewfinder coverage" : "95%","Focus points" : 39,"modele" : "D5300" , "size" : 2600 }]
+},
+{"key":  "D7200", 
+ "values" : [{"x":25600,"y":100,"Sensor type" : "CMOS","Sensor manufacturer" : "Sony","Viewfinder coverage" : "100%","Movie mode" : "Yes","Focus points" : 51,"Megapixel" : 24.2,"GPS" : "-","Image processor" : "EXPEED 4","_IMG_" : "","Viewfinder magnification" : "0.94x","Live view" : "Yes","Storage media" : "SD/SDHC/SDXC (×2)","Wifi" : "Yes (Built-in)","Sensor format" : "APS-C","Release Date" : "2015 2Q","Metering pixels" : 2016,"modele" : "D7200" , "size" : 2700 }]
+},
+{"key":  "D300S", 
+ "values" : [{"x":3200,"y":200,"Sensor format" : "APS-C","Release Date" : "2009 3Q","Movie mode" : "Yes","Image processor" : "EXPEED","_IMG_" : "","Storage media" : "CF, SD, SDHC","Metering pixels" : 1005,"Megapixel" : 12.3,"GPS" : "-","Focus points" : 51,"Viewfinder coverage" : "100%","Sensor manufacturer" : "Sony","Wifi" : "-","Sensor type" : "CMOS","Live view" : "Yes","Viewfinder magnification" : "0.94x","modele" : "D300S" , "size" : 2800 }]
+},
+{"key":  "D3200", 
+ "values" : [{"x":6400,"y":100,"Wifi" : "-","Movie mode" : "Yes","Sensor format" : "APS-C","Megapixel" : 24.2,"Storage media" : "SD, SDHC, SDXC","Sensor manufacturer" : "Nikon","Viewfinder coverage" : "95%","GPS" : "-","Live view" : "Yes","Metering pixels" : 420,"_IMG_" : "","Sensor type" : "CMOS","Image processor" : "EXPEED 3","Focus points" : 11,"Release Date" : "2012 2Q","Viewfinder magnification" : "0.8x","modele" : "D3200" , "size" : 2900 }]
+},
+{"key":  "D610", 
+ "values" : [{"x":6400,"y":100,"Viewfinder coverage" : "100%","Metering pixels" : 2016,"Wifi" : "-","Release Date" : "2013 3Q","Focus points" : 39,"Image processor" : "EXPEED 3","_IMG_" : "","Sensor manufacturer" : "Sony","Megapixel" : 24.3,"Sensor format" : "Full-frame","Sensor type" : "CMOS","Storage media" : "SD/SDHC/SDXC (×2)","Viewfinder magnification" : "0.7x","Movie mode" : "Yes","GPS" : "-","Live view" : "Yes","modele" : "D610" , "size" : 3000 }]
+},
+{"key":  "D1H", 
+ "values" : [{"x":1600,"y":200,"Sensor format" : "APS-C","Wifi" : "-","Live view" : "No","GPS" : "-","Megapixel" : 2.7,"Viewfinder magnification" : "0.8x","Release Date" : "2001 1Q","_IMG_" : "","Image processor" : "-","Movie mode" : "No","Sensor type" : "CCD","Storage media" : "CF, MicroDrive","Focus points" : 5,"Sensor manufacturer" : "Sony","Viewfinder coverage" : "96%","Metering pixels" : 1005,"modele" : "D1H" , "size" : 3100 }]
+},
+{"key":  "D3", 
+ "values" : [{"x":6400,"y":200,"_IMG_" : "","GPS" : "-","Sensor manufacturer" : "Nikon","Storage media" : "CF, MicroDrive (x2)","Metering pixels" : 1005,"Focus points" : 51,"Wifi" : "-","Viewfinder magnification" : "0.7x","Live view" : "Yes","Sensor format" : "Full-frame","Movie mode" : "No","Sensor type" : "CMOS","Viewfinder coverage" : "100%","Image processor" : "EXPEED","Release Date" : "2007 3Q","Megapixel" : 12.1,"modele" : "D3" , "size" : 3200 }]
+},
+{"key":  "D5100", 
+ "values" : [{"x":6400,"y":100,"Sensor format" : "APS-C","Storage media" : "SD, SDHC, SDXC","Live view" : "Yes","Focus points" : 11,"Viewfinder magnification" : "0.78x","Release Date" : "2011 2Q","Viewfinder coverage" : "95%","GPS" : "-","Sensor manufacturer" : "Sony","_IMG_" : "","Megapixel" : 16.2,"Image processor" : "EXPEED 2","Wifi" : "-","Metering pixels" : 420,"Sensor type" : "CMOS","Movie mode" : "Yes","modele" : "D5100" , "size" : 3300 }]
+},
+{"key":  "D100", 
+ "values" : [{"x":1600,"y":200,"Viewfinder coverage" : "95%","Sensor manufacturer" : "Sony","Metering pixels" : 1005,"Sensor type" : "CCD","Live view" : "No","Sensor format" : "APS-C","Movie mode" : "No","GPS" : "-","Image processor" : "-","Storage media" : "CF, MicroDrive","Wifi" : "-","_IMG_" : "","Release Date" : "2002 1Q","Viewfinder magnification" : "0.8x","Megapixel" : 6.1,"Focus points" : 5,"modele" : "D100" , "size" : 3400 }]
+},
+{"key":  "D2Xs", 
+ "values" : [{"x":800,"y":100,"Megapixel" : 12.4,"Wifi" : "-","Sensor type" : "CMOS","Focus points" : 11,"Movie mode" : "No","Metering pixels" : 1005,"Viewfinder coverage" : "100%","Viewfinder magnification" : "0.86x","Storage media" : "CF, MicroDrive","Sensor manufacturer" : "Sony","_IMG_" : "","Sensor format" : "APS-C","Image processor" : "-","Live view" : "No","Release Date" : "2006 2Q","GPS" : "-","modele" : "D2Xs" , "size" : 3500 }]
+},
+{"key":  "D3S", 
+ "values" : [{"x":12800,"y":200,"_IMG_" : "","Viewfinder coverage" : "100%","Sensor format" : "Full-frame","Sensor type" : "CMOS","Focus points" : 51,"Live view" : "Yes","Megapixel" : 12.1,"Storage media" : "CF (x2)","Viewfinder magnification" : "0.7x","Release Date" : "2009 4Q","Sensor manufacturer" : "Nikon","GPS" : "-","Wifi" : "-","Metering pixels" : 1005,"Image processor" : "EXPEED","Movie mode" : "Yes","modele" : "D3S" , "size" : 3600 }]
+},
+{"key":  "D3X", 
+ "values" : [{"x":1600,"y":100,"Megapixel" : 24.5,"GPS" : "-","Storage media" : "CF, MicroDrive (x2)","Release Date" : "2008 4Q","_IMG_" : "2.static.img-dpreview.com/reviews/NikonD3X/images/front-001.jpg?v=3416","Viewfinder magnification" : "0.7x","Sensor type" : "CMOS","Live view" : "Yes","Sensor format" : "Full-frame","Wifi" : "-","Metering pixels" : 1005,"Viewfinder coverage" : "100%","Sensor manufacturer" : "Sony","Image processor" : "EXPEED","Focus points" : 51,"Movie mode" : "No","modele" : "D3X" , "size" : 3700 }]
+},
+{"key":  "D40X", 
+ "values" : [{"x":1600,"y":100,"Megapixel" : 10.2,"Image processor" : "-","Storage media" : "SD, SDHC","GPS" : "-","Movie mode" : "No","Sensor format" : "APS-C","Release Date" : "2007 2Q","Sensor manufacturer" : "Sony","Viewfinder coverage" : "95%","Viewfinder magnification" : "0.8x","Sensor type" : "CCD","_IMG_" : "","Metering pixels" : 420,"Wifi" : "-","Focus points" : 3,"Live view" : "No","modele" : "D40X" , "size" : 3800 }]
+},
+{"key":  "D70", 
+ "values" : [{"x":1600,"y":200,"Wifi" : "-","Sensor manufacturer" : "Sony","Focus points" : 5,"Image processor" : "-","Live view" : "No","Storage media" : "CF, MicroDrive","GPS" : "-","_IMG_" : "","Viewfinder magnification" : "0.75x","Metering pixels" : 1005,"Sensor type" : "CCD","Megapixel" : 6.1,"Viewfinder coverage" : "95%","Release Date" : "2004 1Q","Movie mode" : "No","Sensor format" : "APS-C","modele" : "D70" , "size" : 3900 }]
+},
+{"key":  "D7100", 
+ "values" : [{"x":6400,"y":100,"Focus points" : 51,"Release Date" : "2013 1Q","Megapixel" : 24.1,"Movie mode" : "Yes","Sensor type" : "CMOS","_IMG_" : "","Sensor manufacturer" : "Toshiba","Sensor format" : "APS-C","Viewfinder magnification" : "0.94x","Viewfinder coverage" : "100%","GPS" : "-","Live view" : "Yes","Metering pixels" : 2016,"Image processor" : "EXPEED 3","Storage media" : "SD/SDHC/SDXC (×2)","Wifi" : "-","modele" : "D7100" , "size" : 4000 }]
+},
+{"key":  "D810", 
+ "values" : [{"x":12800,"y":64,"Sensor manufacturer" : "Sony","Focus points" : 51,"Viewfinder magnification" : "0.7x","Sensor format" : "Full-frame","Sensor type" : "CMOS","Megapixel" : 36.3,"Live view" : "Yes","Release Date" : "2014 2Q","Storage media" : "CF, SDHC, SDXC","GPS" : "-","Metering pixels" : 91000,"Wifi" : "-","Image processor" : "EXPEED 4","Movie mode" : "Yes","_IMG_" : "","Viewfinder coverage" : "100%","modele" : "D810" , "size" : 4100 }]
+},
+{"key":  "Df", 
+ "values" : [{"x":12800,"y":100,"Focus points" : 39,"Live view" : "Yes","Storage media" : "SD/SDHC/SDXC","GPS" : "-","Release Date" : "2013 4Q","Wifi" : "-","Metering pixels" : 2016,"Viewfinder magnification" : "0.7x","Movie mode" : "No","Sensor format" : "Full-frame","Sensor type" : "CMOS","Viewfinder coverage" : "100%","_IMG_" : "","Megapixel" : 16.2,"Image processor" : "EXPEED 3","Sensor manufacturer" : "Nikon","modele" : "Df" , "size" : 4200 }]
+},
+{"key":  "D4S", 
+ "values" : [{"x":12800,"y":100,"Image processor" : "EXPEED 4","Sensor manufacturer" : "Nikon","Sensor type" : "CMOS","Live view" : "Yes","Movie mode" : "Yes","Release Date" : "2014 1Q","Storage media" : "CF, XQD","Viewfinder coverage" : "100%","Focus points" : 51,"Metering pixels" : 91000,"_IMG_" : "","Wifi" : "-","GPS" : "-","Megapixel" : 16.2,"Viewfinder magnification" : "0.7x","Sensor format" : "Full-frame","modele" : "D4S" , "size" : 4300 }]
+},
+{"key":  "D1X", 
+ "values" : [{"x":800,"y":125,"GPS" : "-","Storage media" : "CF, MicroDrive","Focus points" : 5,"Sensor type" : "CCD","Wifi" : "-","Viewfinder magnification" : "0.8x","Image processor" : "-","Sensor manufacturer" : "Sony","_IMG_" : "","Live view" : "No","Movie mode" : "No","Megapixel" : 5.3,"Release Date" : "2001 1Q","Sensor format" : "APS-C","Viewfinder coverage" : "96%","Metering pixels" : 1005,"modele" : "D1X" , "size" : 4400 }]
+}
+ ] 

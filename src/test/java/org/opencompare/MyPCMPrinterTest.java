@@ -66,7 +66,7 @@ public class MyPCMPrinterTest {
         
         JsonExport jsexport = new JsonExport();
         try{
-        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/index.html")));
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("NVD3/index.html")));
         	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
         	buffwrit.write(jsexport.filtreHtml(pcm));
         	buffwrit.close();
@@ -89,7 +89,7 @@ public class MyPCMPrinterTest {
     	
         JsonExport jsexport = new JsonExport();
         try{
-        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/new.json")));
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("NVD3/new.json")));
         	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
         	buffwrit.write(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
         	//buffwrit.write(jsexport.matrixAfficher(pcm, "nb de place","nb de porte"));
@@ -107,32 +107,32 @@ public class MyPCMPrinterTest {
     	 System.out.println(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
     }
     
-    @Test
-    public void TestHtml() throws Exception {
-    	
-    	
-      
-        try (final WebClient webClient = new WebClient()) {
-            final HtmlPage page = webClient.getPage("file:///C:/Users/Alae/git/Projet1/pcms/jsonfich.html");
-            assertEquals(" OKKKK ","Product Chart", page.getTitleText());
-
-     
-
-            final String pageAsXml = page.asXml();
-           
-           
-
+//    @Test
+//    public void TestHtml() throws Exception {
+//    	
+//    	
+//      
+//        try (final WebClient webClient = new WebClient()) {
+//            final HtmlPage page = webClient.getPage("file:///C:/Users/Alae/git/Projet1/pcms/jsonfich.html");
+//            assertEquals(" OKKKK ","Product Chart", page.getTitleText());
+//
+//     
+//
+//            final String pageAsXml = page.asXml();
+//           
+//           
+//
+//       
+//           final HtmlHead head=(HtmlHead) page.getByXPath("//head").get(0);
+//           System.out.println(head.asXml());
+//           assertTrue(head.asXml().contains("<title>"));
+//           assertTrue(head.asXml().contains("</title>"));
+//           
+//
+//       
+//        }
        
-           final HtmlHead head=(HtmlHead) page.getByXPath("//head").get(0);
-           System.out.println(head.asXml());
-           assertTrue(head.asXml().contains("<title>"));
-           assertTrue(head.asXml().contains("</title>"));
-           
-
-       
-        }
-       
-            }
+           // }
    
 
 }

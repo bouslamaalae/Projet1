@@ -11,10 +11,14 @@ In our web page, we have two parts, the chart and the filters.
 
 We Use NVD3 for the formatting of the chart.  For each product, we can have specific datas by positioning on this product on the graph. We can have many informations for each product and also links and photos. NVD3 has an Apache Licence.
 
-We have used Eclipse, and Notepad++ for this project. To display the matrix, we have used WampServer to launch the project from a browser.
-
-
 The filter is done in html and permit us to choose one or many properties of a product.
+
+We have used Eclipse, WampServer and Notepad++ for this project.
+
+In our project we have two main parts: a web part that is in the NVD3 folder and the other one for java part is in the src folder of the project. We display the final result with WampServer so you can just copy the NVD3 folder in the server and launch index.html to see the final result.
+
+
+
 
 
 

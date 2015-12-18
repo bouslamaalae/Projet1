@@ -1,6 +1,8 @@
 package org.opencompare;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,11 +11,15 @@ import java.io.IOException;
 
 import org.junit.Test;
 import org.opencompare.api.java.PCM;
-import org.opencompare.api.java.impl.io.KMFJSONExporter;
 import org.opencompare.api.java.impl.io.KMFJSONLoader;
 import org.opencompare.api.java.io.HTMLExporter;
-import org.opencompare.api.java.io.IOMatrix;
 import org.opencompare.api.java.io.PCMLoader;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlBody;
+import com.gargoylesoftware.htmlunit.html.HtmlHead;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.gargoylesoftware.htmlunit.html.HtmlTable;
 
 
 
@@ -92,15 +98,41 @@ public class MyPCMPrinterTest {
         catch(IOException e){
         	e.printStackTrace();
         }
-    	//assertNotNull(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse"));
+    	assertNotNull(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
     	
-    	//assertTrue(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").length()>0);
+    	assertTrue(jsexport.matrixAfficher(pcm, "ISO max","ISO min").length()>0);
     	
     	//assertEquals(jsexport.matrixAfficher(pcm, "nb de place","Boite a vitesse").substring(18, 20), "D1");
     	//System.out.println();
-    	 System.out.println(jsexport.matrixAfficher(pcm, "nb de place","nb de porte"));
+    	 System.out.println(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
     }
     
+    @Test
+    public void TestHtml() throws Exception {
+    	
+    	
+      
+        try (final WebClient webClient = new WebClient()) {
+            final HtmlPage page = webClient.getPage("file:///C:/Users/Alae/git/Projet1/pcms/jsonfich.html");
+            assertEquals(" OKKKK ","Product Chart", page.getTitleText());
+
+     
+
+            final String pageAsXml = page.asXml();
+           
+           
+
+       
+           final HtmlHead head=(HtmlHead) page.getByXPath("//head").get(0);
+           System.out.println(head.asXml());
+           assertTrue(head.asXml().contains("<title>"));
+           assertTrue(head.asXml().contains("</title>"));
+           
+
+       
+        }
+       
+            }
    
 
 }

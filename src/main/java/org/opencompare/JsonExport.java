@@ -75,14 +75,12 @@ public class JsonExport {
 		 ArrayList<String> filtreBool ;
 		 
     	 StringBuilder builbder = new StringBuilder();
-//    	 builbder.append("<html> \n");
-//    	 builbder.append("<body> \n");
-//    	 builbder.append("<table> \n");
-//    	 builbder.append("<tr> \n");
+
     	 builbder.append("<html> \n");
-    	 builbder.append("<head><meta charset=\"utf-8\"><link href=\"nv.d3.css\" rel=\"stylesheet\" type=\"text/css\"> <link href=\"page.css\" rel=\"stylesheet\" type=\"text/css\"><script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js\" charset=\"utf-8\"> </script><script src=\"nv.d3.js\"></script><script type=\"text/javascript\" src=\"new.js\"></script><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script></head>");
-    	 builbder.append("<body> \n");
+    	 builbder.append("<head><title>Product Chart</title><meta charset=\"utf-8\"><link href=\"css/nv.d3.css\" rel=\"stylesheet\" type=\"text/css\"> <link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\" media=\"screen\">	<script src=\"js/jquery-1.6.2.min.js\" type=\"text/javascript\"></script><script src=\"js/cufon-yui.js\" type=\"text/javascript\"></script>	<script src=\"js/cufon-replace.js\" type=\"text/javascript\"></script><script src=\"js/Vegur_300.font.js\" type=\"text/javascript\"></script><link href=\"css/page.css\" rel=\"stylesheet\" type=\"text/css\"><script src=\"https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js\" charset=\"utf-8\"> </script><script src=\"js/nv.d3.js\"></script><script type=\"text/javascript\" src=\"js/new.js\"></script><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script></head>");
+    	 builbder.append("<body id=\"page1\"> <div class=\"bg\"> \n");
     	 builbder.append("<h2><center> Product Chart ! </center></h2>");
+    	 builbder.append("<pre>Caracteristiques </pre>");
     	 builbder.append("<div id='main'><div id=\"test1\" style='height:500px' class='with-3d-shadow with-transitions'> <svg></svg></div> <div id=\"filtre\">");
     	 builbder.append("<table> \n");
     	 builbder.append("<tr> <div>\n");
@@ -94,7 +92,7 @@ public class JsonExport {
     		 //builbder.append("<td></br> \n");
     		 // on met le nom du feature au dessus
     		 builbder.append("<a class=\"b1\">");
-    		 builbder.append("<strong>");
+    		 builbder.append("<img src=\"images/marker.gif\"> <strong>");
     		 builbder.append(pcm.getFeatures().get(i).getName() + "\n");
     		 builbder.append("</strong>");
     		 builbder.append("</a><div class=\"toggle\" style=\"display:none\">");
@@ -133,22 +131,12 @@ public class JsonExport {
 			  Float min =  Collections.min(filtreInteger);
 			  builbder.append("<input type=\"range\" value=\"15\" max=\""+max+"\" min=\""+min+"\" step=\"5\"> ");
 			  builbder.append("</tr> \n");
-			 
+			  builbder.append("</div> \n");
 			  k=filtreInteger.size();
     		 }
     		 //fin test
     		 
-    		/* for (int k=0;k<filtreInteger.size();k++)
-    		 {
-    			 
-    			 builbder.append("<tr> \n");
-    			 builbder.append("<td> \n");
-    			 builbder.append(filtreInteger.get(k));
-    			 builbder.append("<td> \n");
-    			 builbder.append("<input type=\"range\" > ");
-    			// builbder.append("\n");
-    			 builbder.append("</tr> \n");
-    		 }*/
+    		
     		 if(!filtreString.isEmpty()){
     			// builbder.append("<tr> \n");
 				 builbder.append(" <div id=\"essai\"> \n");
@@ -160,15 +148,9 @@ public class JsonExport {
     			 for (int l=0;l<filtreString.size();l++)
     			 {
 
-    				// builbder.append("<tr> \n");
-
-    				// builbder.append("<td> \n");
-    				 
-    				// builbder.append("<td> \n");
+    				
     				 builbder.append("<option> "+filtreString.get(l)+" </option> ");
-    				 //builbder.append(filtreString.get(l));
-    				 //builbder.append("\n");
-    				 //builbder.append("</tr> \n");
+    				
     			 }
     			 
     			 builbder.append("</Select>");  
@@ -186,6 +168,7 @@ public class JsonExport {
     			// builbder.append("<td> \n");
     			 builbder.append("<input type=\"checkbox\" > ");
     			 builbder.append("</tr> \n");
+    			 builbder.append("</div> \n");
     			 y = filtreBool.size();
     		 }
     		 
@@ -194,24 +177,6 @@ public class JsonExport {
     		 
     		 builbder.append("</br> \n");   		 
     		 
-//    		 Cell c = pcm.getProducts().get(i).getCells().get(2);
-//    		 if(c.getInterpretation().toString().contains("StringValue"))
-//			 {
-//				 builbder.append("<input type=\"checkbox\" > ");
-//				 builbder.append(c.getContent().toString());
-//			 }
-    		 
-    		 
-    		 
-    		 
-//    		 for(Cell cl : cells){
-//    			 if(cl.getInterpretation().toString().contains("StringValue"))
-//    			 {
-//    				 builbder.append("<input type=\"checkbox\" > ");
-//    				 builbder.append(cl.getContent().toString());
-//    			 }
-//    			 
-//    			// builbder.append("Filter:" + "\"" + cl.getInterpretation().toString().substring(36, 48)+ "\","); 
     		 }
     	 
     	 builbder.append("\n");
@@ -226,6 +191,8 @@ public class JsonExport {
     	 builbder.append("}); \n");
     	 builbder.append("}); \n");
     	 builbder.append("</script>\n");
+    	 builbder.append("<footer><div class=\"main\"><div class=\"container_12\"><div class=\"wrapper\"></div>	</div></div></footer>	<p> Module PDL - M1 MIAGE </br>ALLAOUI - BOUSLAMA - DIAWARA - ERIKA - GAHIMBARE - NDOUR </p> \n");
+    	 builbder.append("<script type=\"text/javascript\"> Cufon.now(); </script>");
     	 builbder.append("</body> \n");
     	 builbder.append("</html> \n");
     	 
@@ -286,42 +253,5 @@ public class JsonExport {
     }
     
  
-/*    public String matrixAfficher(PCM pcm, String col1, String col2) throws IOException{
-    	 // Load a PCM
-        StringBuilder builbder = new StringBuilder();
-         		builbder.append("[\n");
-				
-				for(int i=0; i<pcm.getProducts().size(); i++){
-					List<Cell> cells =  pcm.getProducts().get(i).getCells();
-					//builbder.append("{\"nomProduit\": " + "\""+pcm.getProducts().get(i).getName()+"\",");
-					builbder.append("{Key: " + "\""+pcm.getProducts().get(i).getName()+"\",");
-					
-					// deux for pour récuperer le x et y en ordre
-					for(Cell cl : cells){
-						//if(cl.getFeature().getName().equals(col1) || cl.getFeature().getName().equals(col2))
-						//{//builbder.append("\"" + cl.getFeature().getName()+"\":" + "\"" + cl.getContent().toString()+ "\",");
-						//pour récupérer le x
-						if(cl.getFeature().getName().equals(col1)){
-						    builbder.append("x:" + "\"" + cl.getContent().toString()+ "\",");
-						    builbder.append("Filter:" + "\"" + cl.getInterpretation().toString().substring(36, 48)+ "\",");
-					    }
-					}
-					for(Cell cl : cells){
-						
-						if(cl.getFeature().getName().equals(col2)){
-						 builbder.append("y:" + "\"" + cl.getContent().toString()+ "\",");
-						 builbder.append("Filter:" + "\"" + cl.getInterpretation().toString().substring(36, 47)+ "\",");
-						}
-					}
-					builbder.deleteCharAt(builbder.lastIndexOf(","));
-					builbder.append("},\n");
-					
-				}
-				builbder.deleteCharAt(builbder.lastIndexOf(","));
-				builbder.append("]");
- 		
- 	
- 		
- 		return builbder.toString();
-    }*/
+
 }

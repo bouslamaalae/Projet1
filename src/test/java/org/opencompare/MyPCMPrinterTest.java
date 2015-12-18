@@ -66,7 +66,7 @@ public class MyPCMPrinterTest {
         
         JsonExport jsexport = new JsonExport();
         try{
-        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/jsonfich.html")));
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/index.html")));
         	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
         	buffwrit.write(jsexport.filtreHtml(pcm));
         	buffwrit.close();
@@ -89,7 +89,7 @@ public class MyPCMPrinterTest {
     	
         JsonExport jsexport = new JsonExport();
         try{
-        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/jsonfich.json")));
+        	BufferedWriter buffwrit = new BufferedWriter(new FileWriter(new File("pcms/new.json")));
         	//buffwrit.write(jsexport.matrixAfficher("ISO max","ISO min"));
         	buffwrit.write(jsexport.matrixAfficher(pcm, "ISO max","ISO min"));
         	//buffwrit.write(jsexport.matrixAfficher(pcm, "nb de place","nb de porte"));

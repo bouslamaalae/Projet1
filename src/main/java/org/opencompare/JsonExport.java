@@ -131,7 +131,7 @@ public class JsonExport {
 			  Float min =  Collections.min(filtreInteger);
 			  builbder.append("<input type=\"range\" value=\"15\" max=\""+max+"\" min=\""+min+"\" step=\"5\"> ");
 			  builbder.append("</tr> \n");
-			  builbder.append("</div> \n");
+			
 			  k=filtreInteger.size();
     		 }
     		 //fin test
@@ -168,7 +168,7 @@ public class JsonExport {
     			// builbder.append("<td> \n");
     			 builbder.append("<input type=\"checkbox\" > ");
     			 builbder.append("</tr> \n");
-    			 builbder.append("</div> \n");
+    			 
     			 y = filtreBool.size();
     		 }
     		 
